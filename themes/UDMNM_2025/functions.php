@@ -38,3 +38,19 @@ function udmnm_cart_fragment($fragments) {
     $fragments['span.cart-count'] = ob_get_clean();
     return $fragments;
 }
+
+// Plugin đổi logo đăng nhập 
+function custom_login_logo() {
+    ?>
+    <style type="text/css">
+        .login h1 a {
+            background-image: url('<?php echo get_template_directory_uri(); ?>/images/logo.png');
+            background-size: contain;
+            width: 120px;
+            height: 120px;
+            display: block;
+        }
+    </style>
+    <?php
+}
+add_action('login_head', 'custom_login_logo');
