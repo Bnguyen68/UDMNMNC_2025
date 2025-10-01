@@ -8,8 +8,11 @@ function udmnm_setup() {
 
     // Đăng ký menu điều hướng
     register_nav_menus(array(
-        'primary' => __('Main Menu', 'udmnm-2025')
-    ));
+    'primary' => __('Main Menu', 'udmnm-2025'),
+    'footer-office-menu' => __('Footer Office Menu', 'udmnm-2025'),        // Văn phòng
+    'footer-contact-menu' => __('Footer Contact Menu', 'udmnm-2025'),      // Liên hệ
+    'footer-policy-menu' => __('Footer Policy Menu', 'udmnm-2025'),        // Hướng dẫn & chính sách
+));
 
     // Đa ngôn ngữ
     load_theme_textdomain('udmnm-2025', get_template_directory() . '/languages');

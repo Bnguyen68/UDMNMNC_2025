@@ -6,7 +6,6 @@ get_header();
 ?>
 
 <section class="news-grid-section">
-  <!-- Tiêu đề TIN TỨC canh giữa -->
   <div class="news-page-title">TIN TỨC</div>
   <div class="news-grid-list">
     <?php
