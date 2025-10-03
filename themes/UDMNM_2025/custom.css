@@ -14,7 +14,6 @@ html, body {
 
 /* ====== HEADER - DÍNH TRÊN CÙNG ====== */
 .main-header-bg {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -29,7 +28,7 @@ html, body {
 
 /* ====== PHẦN NỘI DUNG DƯỚI HEADER ====== */
 .site-content {
-    margin-top: 85px;
+    margin-top: 2rem;
 }
 body.admin-bar .site-content {
     margin-top: 117px !important;
