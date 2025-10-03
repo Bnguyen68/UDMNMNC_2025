@@ -204,12 +204,23 @@ body.admin-bar .site-content {
 }
 
 /* ====== FOOTER ====== */
+.footer {
+    background: #111; /* Nền đen kéo dài full width */
+    color: #fff;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    padding: 48px 0 24px 0;
+    box-sizing: border-box;
+}
+
 .footer-content {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 32px;
     overflow-x: hidden;
 }
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -230,13 +241,12 @@ body.admin-bar .site-content {
 .footer-column h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #f36d3b;
+    color: #ffad7b; /* Tiêu đề màu cam nổi trên nền đen */
     font-weight: 700;
     text-align: left;
     white-space: nowrap;
 }
 
-/* Sửa lại ul, li cho đồng đều và chữ bám sát chấm đầu dòng */
 .footer-column ul,
 .footer-support-menu-list {
     padding-left: 22px;
@@ -248,21 +258,20 @@ body.admin-bar .site-content {
 .footer-column li,
 .footer-support-menu-list li {
     font-size: 20px;
-    color: #222 !important;
+    color: #fff !important; /* Chữ trắng trên nền đen */
     line-height: 1.7;
     font-weight: 400;
     margin-bottom: 0;
     word-break: break-word;
     text-align: left;
     display: list-item;
-    white-space: normal; /* ĐỂ CHỮ XUỐNG DÒNG TỰ NHIÊN, KHÔNG DÍNH LIỀN */
+    white-space: normal;
 }
 
-/* Nếu có các thẻ a trong menu */
-.footer-support-menu-list a,
-.footer-column a {
+.footer-column a,
+.footer-support-menu-list a {
     font-size: 20px;
-    color: #222 !important;
+    color: #fff !important;
     text-decoration: none;
     font-weight: 400;
     word-break: break-word;
@@ -273,43 +282,51 @@ body.admin-bar .site-content {
 
 .footer-support-menu-list a:hover,
 .footer-column a:hover {
-    color: #ff6b35 !important;
+    color: #ffad7b !important;
     text-decoration: underline !important;
 }
+
 .footer-newsletter-form input {
     font-size: 18px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     margin-bottom: 10px;
-    color: #222;
+    color: #fff;
+    background: #222;
     width: 100%;
     box-sizing: border-box;
 }
+
 .footer-newsletter-form button {
-    background: #f36d3b;
-    color: #fff;
+    background: #ffad7b;
+    color: #111;
     border: none;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 4px;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
 }
+
 .footer-newsletter-form button:hover {
-    background: #ff6b35;
+    background: #fff;
+    color: #111;
 }
+
 .copyright {
     font-size: 16px;
     text-align: center;
     width: 100%;
-    margin-top: 10px;
-    color: #222;
+    margin-top: 20px;
+    color: #ccc;
     font-weight: 400;
+    letter-spacing: 1px;
 }
+
 @media (max-width: 900px) {
     .footer-content {
         max-width: 100%;
@@ -336,6 +353,25 @@ body.admin-bar .site-content {
     .copyright {
         font-size: 14px;
     }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  width: 100vw;
 }
 
 /* ====== BANNER ====== */
@@ -551,7 +587,6 @@ body.admin-bar .site-content {
 
 /* ====== TIÊU ĐỀ TRANG LIÊN HỆ ====== */
 .contact-page-title {
-    margin-top: 200px;
     margin-bottom: 38px;
     text-align: center;
     font-size: 2.6rem;
@@ -697,7 +732,6 @@ body.admin-bar .site-content {
 
 /* ====== TIN TỨC GRID, PHÂN TRANG ====== */
 .news-grid-section {
-    margin-top: 200px;
     padding-bottom: 48px;
 }
 .news-page-title {
